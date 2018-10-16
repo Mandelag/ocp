@@ -22,7 +22,7 @@ public class Schedule {
     return Duration.between(startTime, endTime);
   }
 
-  public boolean isOverlaping(Schedule that) {
+  public boolean overlap(Schedule that) {
     return this.getDayOfWeek() == that.getDayOfWeek() && 
       this.getStartTime().isBefore(that.getEndTime()) &&
       this.getEndTime().isAfter(that.getStartTime());
@@ -38,5 +38,9 @@ public class Schedule {
 
   public LocalTime getEndTime() {
     return this.endTime;
+  }
+
+  public String toString() {
+    return "%s from %s to %s.".format(getDayOfWeek().toString(), getStartTime().toString(), getEndTime().toString());
   }
 }
