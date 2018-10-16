@@ -5,7 +5,7 @@ import java.time.LocalTime;
 import java.time.Duration;
 
 /**
- * Represent contiguous block of time in a day.
+ * Represent contiguous block of time in a day in a week.
  */
 public class Schedule {
   private final DayOfWeek dayOfWeek;
